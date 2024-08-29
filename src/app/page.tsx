@@ -58,8 +58,8 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center gap-4">
           <form onSubmit={handleSubmit} >
-            <div className="flex flex-col justify-between items-start gap-2">
-              <div className="flex justify-center items-center gap-4">
+            <div className="flex flex-col justify-between items-center gap-2">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <input
               className="rounded-md outline-none p-3 border border-primary bg-black placeholder-primary text-primary w-72"
               placeholder="Enter your email"
@@ -70,14 +70,14 @@ export default function Home() {
               required
             />
             <button
-              className="bg-primary text-black px-5 py-[0.75rem] text-sm font-semibold rounded-md"
+              className="bg-primary  w-full md:w-96 text-black px-5 py-[0.75rem] text-sm font-semibold rounded-md"
               type="submit"
               disabled={loading}
             >
               {loading ? "Joining..." : "Join The Waitlist"}
             </button>
               </div>
-              <div className="w-full">
+              <div className="w-86">
               {error && <p className="bg-red-200 px-5 py-3 rounded-full text-red-500 mt-4">❗{error}</p>}
               {success && <p className="bg-primary/10 px-5 py-2 rounded-full text-primary mt-4">✅ {success}</p>}
               </div>
